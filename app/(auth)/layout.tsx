@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
             <html lang='en'>
                 <body 
-                    className={`${font.className} bg-dark-1 w-full min-h-screen flex justify-center`}
+                    className={`${font.className} bg-dark-1 w-full min-h-screen flex items-center justify-center`}
                 >
                     {children}
                 </body>

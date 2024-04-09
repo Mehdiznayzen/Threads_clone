@@ -5,7 +5,6 @@ import { Thread } from "../models/thread.model"
 import User from "../models/user.model"
 import { connectToDB } from "../mongoose"
 
-
 // For creating threads
 interface createThreadParams {
     text: string,
@@ -14,6 +13,7 @@ interface createThreadParams {
     path: string,
 }
 
+// for creating threads
 export const createThread = async ({ author, communityId, path, text } : createThreadParams) => {
     try {
         connectToDB()
@@ -35,7 +35,6 @@ export const createThread = async ({ author, communityId, path, text } : createT
         throw new Error(`Failed to create new thread : ${error.message}`)
     }
 }
-
 
 // For fetching the posts
 export const fetchPosts = async (pageNumber = 1, pageSize = 20) => {
