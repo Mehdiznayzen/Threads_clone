@@ -2,6 +2,7 @@ import UserCard from "@/components/cards/UserCard";
 import { fetchUser, fetchUsers } from "@/lib/actions/user.actions";
 import { currentUser } from "@clerk/nextjs"
 import { redirect } from "next/navigation";
+import Searchbar from "@/components/shared/Searchbar";
 
 import { cn } from '@/lib/utils'
 import { Dancing_Script } from 'next/font/google'
@@ -30,6 +31,8 @@ const SearchPage = async () => {
     return (
         <section>
             <h1 className={cn('head-text mb-10', font.className)}>Search</h1>
+
+            <Searchbar routeType='search' />
 
             {/* Search bar */}
             <div className="mt-14 flex flex-col gap-9">

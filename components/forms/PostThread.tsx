@@ -31,7 +31,7 @@ const PostThread = ({ userId } : { userId : string }) => {
             path: pathname,
             text: values.thread,
         })
-
+        
         router.push('/')
     }
 
